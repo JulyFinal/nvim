@@ -44,8 +44,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "C:\\Users\\julyf\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?.lua;C:\\Users\\julyf\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\share\\lua\\5.1\\?\\init.lua;C:\\Users\\julyf\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?.lua;C:\\Users\\julyf\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\luarocks\\rocks-5.1\\?\\init.lua"
-local install_cpath_pattern = "C:\\Users\\julyf\\AppData\\Local\\Temp\\nvim\\packer_hererocks\\2.1.0-beta3\\lib\\lua\\5.1\\?.so"
+local package_path_str = "/home/final/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/final/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/final/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/final/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/final/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -71,73 +71,123 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["bufferline.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\bufferline.nvim",
-    url = "https://ghproxy.com/https://github.com/akinsho/bufferline.nvim"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "git@github.com:akinsho/bufferline.nvim"
+  },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "git@github.com:hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "git@github.com:hrsh7th/cmp-cmdline"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "git@github.com:hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "git@github.com:hrsh7th/cmp-path"
+  },
+  ["cmp-vsnip"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "git@github.com:hrsh7th/cmp-vsnip"
   },
   ["dashboard-nvim"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\dashboard-nvim",
-    url = "https://ghproxy.com/https://github.com/glepnir/dashboard-nvim"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
+    url = "git@github.com:glepnir/dashboard-nvim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "git@github.com:rafamadriz/friendly-snippets"
   },
   ["lualine-lsp-progress"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine-lsp-progress",
-    url = "https://ghproxy.com/https://github.com/arkav/lualine-lsp-progress"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/lualine-lsp-progress",
+    url = "git@github.com:arkav/lualine-lsp-progress"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
-    url = "https://ghproxy.com/https://github.com/nvim-lualine/lualine.nvim"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "git@github.com:nvim-lualine/lualine.nvim"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "git@github.com:hrsh7th/nvim-cmp"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "git@github.com:williamboman/nvim-lsp-installer"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "git@github.com:neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-tree.lua",
-    url = "https://ghproxy.com/https://github.com/kyazdani42/nvim-tree.lua"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "git@github.com:kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
-    url = "https://ghproxy.com/https://github.com/nvim-treesitter/nvim-treesitter"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "git@github.com:nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
-    url = "https://ghproxy.com/https://github.com/kyazdani42/nvim-web-devicons"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "git@github.com:kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
-    url = "https://ghproxy.com/https://github.com/wbthomason/packer.nvim"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "git@github.com:wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
-    url = "https://ghproxy.com/https://github.com/nvim-lua/plenary.nvim"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "git@github.com:nvim-lua/plenary.nvim"
   },
   ["project.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\project.nvim",
-    url = "https://ghproxy.com/https://github.com/ahmedkhalf/project.nvim"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/project.nvim",
+    url = "git@github.com:ahmedkhalf/project.nvim"
   },
   ["telescope-env.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope-env.nvim",
-    url = "https://ghproxy.com/https://github.com/LinArcX/telescope-env.nvim"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/telescope-env.nvim",
+    url = "git@github.com:LinArcX/telescope-env.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\telescope.nvim",
-    url = "https://ghproxy.com/https://github.com/nvim-telescope/telescope.nvim"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "git@github.com:nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\tokyonight.nvim",
-    url = "https://ghproxy.com/https://github.com/folke/tokyonight.nvim"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "git@github.com:folke/tokyonight.nvim"
   },
   ["vim-bbye"] = {
     loaded = true,
-    path = "C:\\Users\\julyf\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-bbye",
-    url = "https://ghproxy.com/https://github.com/moll/vim-bbye"
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/vim-bbye",
+    url = "git@github.com:moll/vim-bbye"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/final/.local/share/nvim/site/pack/packer/start/vim-vsnip",
+    url = "git@github.com:hrsh7th/vim-vsnip"
   }
 }
 
