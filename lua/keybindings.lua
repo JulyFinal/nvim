@@ -62,9 +62,9 @@ map("n", "<C-d>", "9j", opt)
 
 
 -- 退出
-map("n", "q", ":q<CR>", opt)
+map("n", "zq", ":wq<CR>", opt)
 map("n", "qq", ":q!<CR>", opt)
-map("n", "Q", ":qa!<CR>", opt)
+map("n", "zQ", ":qa!<CR>", opt)
 
 -- insert 模式下，跳到行首行尾
 map("i", "<C-a>", "<ESC>I", opt)
@@ -77,7 +77,7 @@ local pluginKeys = {}
 
 -- nvim-tree
 -- alt + m 键打开关闭tree
-map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
+map("n", "<leader>1", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = {
   -- 打开文件或文件夹
@@ -89,7 +89,7 @@ pluginKeys.nvimTreeList = {
   { key = "i", action = "toggle_custom" }, -- 对应 filters 中的 custom (node_modules)
   { key = ".", action = "toggle_dotfiles" }, -- Hide (dotfiles)
   -- 文件操作
-  { key = "<F5>", action = "refresh" },
+  { key = "R", action = "refresh" },
   { key = "a", action = "create" },
   { key = "d", action = "remove" },
   { key = "r", action = "rename" },
@@ -101,8 +101,8 @@ pluginKeys.nvimTreeList = {
 
 -- bufferline
 -- 左右Tab切换
-map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "H", ":BufferLineCyclePrev<CR>", opt)
+map("n", "L", ":BufferLineCycleNext<CR>", opt)
 -- 关闭
 --"moll/vim-bbye"
 map("n", "<C-w>", ":Bdelete!<CR>", opt)
@@ -112,17 +112,15 @@ map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
 -- Telescope
 -- 查找文件
-map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+map("n", "<leader>f", ":Telescope find_files<CR>", opt)
 -- 全局搜索
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+map("n", "<leader>ff", ":Telescope live_grep<CR>", opt)
 -- Telescope 列表中 插入模式快捷键
 pluginKeys.telescopeList = {
   i = {
     -- 上下移动
     ["<C-j>"] = "move_selection_next",
     ["<C-k>"] = "move_selection_previous",
-    ["<Down>"] = "move_selection_next",
-    ["<Up>"] = "move_selection_previous",
     -- 历史记录
     ["<C-n>"] = "cycle_history_next",
     ["<C-p>"] = "cycle_history_prev",
