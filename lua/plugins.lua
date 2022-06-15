@@ -22,7 +22,6 @@ packer.startup({
     use("ahmedkhalf/project.nvim")
     -- treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-    -- 你的插件列表...
   end,
   config = {
     -- 并发数限制
@@ -33,7 +32,7 @@ packer.startup({
       -- default_url_format = "https://mirror.ghproxy.com/https://github.com/%s",
       -- default_url_format = "https://gitcode.net/mirrors/%s",
       -- default_url_format = "https://gitclone.com/github.com/%s",
-      default_url_format = "https://ghproxy.com/https://github.com/%s",
+      -- default_url_format = "https://ghproxy.com/https://github.com/%s",
     },
   },
     display = {
