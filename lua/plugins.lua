@@ -37,8 +37,13 @@ packer.startup({
     use("hrsh7th/cmp-path") -- { name = 'path' }
     use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
 
-        -- 常见编程语言代码段
-        use("rafamadriz/friendly-snippets")
+    -- 常见编程语言代码段
+    use("rafamadriz/friendly-snippets")
+    -- ui (新增)
+    use("onsails/lspkind-nvim")
+    use("tami5/lspsaga.nvim" )
+    -- indent-blankline
+    use("lukas-reineke/indent-blankline.nvim")
   end,
   config = {
     -- 并发数限制
